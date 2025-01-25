@@ -58,12 +58,42 @@
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
+  programs.firefox.enable = true;
 
   programs.gh = {
     enable = true;
     settings = {
       git_protocol = "https";
       editor = "nvim";
+    };
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+      xwayland = {
+        force_zero_scaling = true;
+      };
+
+      input = {
+        kb_layout = "fr";
+	follow_mouse = 1;
+	touchpad = {
+          natural_scroll = true;
+	}:
+	sensitivity = 0;
+      };
+
+      "$mainMod" = "SUPER";
+
+      bind = [
+        "$mainMod, return, exec, kitty"
+        "$mainMod, Space, togglefloating"
+	"$mainMod, q, killactive"
+	"$mainMod, M, exit"
+	"$mainMod, F, fullscreen"
+	"$mainMod, J, tooglesplit"
+      ];
     };
   };
 
