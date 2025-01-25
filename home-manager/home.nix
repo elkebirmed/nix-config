@@ -59,7 +59,13 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  programs.gh.enable = true;
+  programs.gh = {
+    enable = true;
+    settings = {
+      git_protocol = "https";
+      editor = "nvim";
+    };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
