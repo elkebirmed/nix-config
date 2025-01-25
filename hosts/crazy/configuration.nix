@@ -73,7 +73,7 @@
   time.timezone = "Africa/Algiers";
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  i18.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
   
   services.xserver.xkb = {
     layout = "fr";
