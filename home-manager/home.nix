@@ -92,7 +92,7 @@
 	"$mainMod, q, killactive"
 	"$mainMod, M, exit"
 	"$mainMod, F, fullscreen"
-	"$mainMod, J, tooglesplit"
+	"$mainMod, J, togglesplit"
       ];
     };
   };
