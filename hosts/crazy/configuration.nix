@@ -70,7 +70,7 @@
 
   # FIXME: Add the rest of your current configuration
   networking.networkmanager.enable = true;
-  time.timezone = "Africa/Algiers";
+  time.timeZone = "Africa/Algiers";
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   i18n.defaultLocale = "en_US.UTF-8";
