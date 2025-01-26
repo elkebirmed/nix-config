@@ -33,6 +33,11 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "fr";
+  };
+
   environment.systemPackages = with pkgs; [
     tree
     wget
