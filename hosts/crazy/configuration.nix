@@ -75,6 +75,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
   i18n.defaultLocale = "en_US.UTF-8";
   
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   services.xserver.xkb = {
     layout = "fr";
     variant = "";
