@@ -103,7 +103,16 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ networkmanagerapplet ];
+  # environment.systemPackages = with pkgs; [ networkmanagerapplet ];
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet
+    pulseaudioFull
+    tree
+    wget
+    curl
+    neovim
+    git
+  ];
 
   services.pulseaudio.enable = false;
   services.pipewire = {
@@ -113,7 +122,7 @@
     pulse.enable = true;
     # lowLatency.enable = true;
   };
-  environment.systemPackages = with pkgs; [ pulseaudioFull ];
+  #environment.systemPackages = with pkgs; [ pulseaudioFull ];
 
   programs.dconf.enable = true;
    programs.gnupg.agent = {
@@ -171,13 +180,13 @@
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
 
-  environment.systemPackages = with pkgs; [
-    tree
-    wget
-    curl
-    neovim
-    git
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   tree
+  #   wget
+  #   curl
+  #   neovim
+  #   git
+  # ];
 
   # Hyprland
   programs.hyprland = {
