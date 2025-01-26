@@ -41,6 +41,7 @@
 
   # Hostname
   networking.hostName = "crazy";
+  networking.useDHCP = false;
 
   # Users
   users = {
@@ -61,4 +62,8 @@
       };
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    google-chrome
+  ];
 }
