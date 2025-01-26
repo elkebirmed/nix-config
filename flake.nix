@@ -14,6 +14,17 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Hyrprland
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
+    };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = {

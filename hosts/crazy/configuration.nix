@@ -25,9 +25,7 @@
   nixpkgs = {
     overlays = [
       # Overlays from overlays and pkgs dir can be added here:
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.stable-packages
+      # outputs.overlays.additions
 
       # Overlays from other flakes can be added here:
       # neovim-nightly-overlay.overlays.default
@@ -39,92 +37,10 @@
       #   });
       # })
     ];
-
-    # Nixpkgs configuration
-    config = {
-      allowUnfree = true;
-    };
   };
-
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-    settings = {
-      # Enable flakes and new 'nix' command
-      experimental-features = "nix-command flakes";
-
-      # Disable global registry
-      flake-registry = "";
-
-      # Workaround for https://github.com/NixOS/nix/issues/9574
-      nix-path = config.nix.nixPath;
-    };
-
-    # Disable channels
-    channel.enable = false;
-
-    # Make flake registry and nix path match flake inputs
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
-
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
   networking.hostName = "crazy";
-
-  # Netowrking
-  networking.networkmanager.enable = true;
-
-  # Localization
-  time.timeZone = "Africa/Algiers";
-
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "fr_FR.UTF-8";
-    LC_IDENTIFICATION = "fr_FR.UTF-8";
-    LC_MEASUREMENT = "fr_FR.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "fr_FR.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "fr_FR.UTF-8";
-    LC_TELEPHONE = "fr_FR.UTF-8";
-    LC_TIME = "fr_FR.UTF-8";
-  };
-
-  # Hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  # Keyboard layout
-  services.xserver.xkb = {
-    layout = "fr";
-    variant = "";
-  };
-
-  # Console
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "fr";
-  };
-
-  # Programs
-  programs.fish.enable = true;
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
-
-  environment.systemPackages = with pkgs; [
-    tree
-    wget
-    curl
-    neovim
-    git
-  ];
 
   # Users
   users = {
@@ -143,17 +59,6 @@
         # Groups to join (such as networkmanager, audio, docker, etc)
         extraGroups = ["wheel" "networkmanager" ];
       };
-    };
-  };
-
-  # SSH server setup
-  services.openssh = {
-    enable = true;
-    settings = {
-      # Forbid root login through SSH.
-      PermitRootLogin = "no";
-      # Use keys only.
-      PasswordAuthentication = false;
     };
   };
 
