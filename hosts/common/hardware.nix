@@ -3,6 +3,7 @@
   hardware = {
     graphics = {
       enable = true;
+
       extraPackages = with pkgs; [
         intel-media-driver
         (vaapiIntel.override { enableHybridCodec = true; })
@@ -11,5 +12,6 @@
       ];
     };
   };
+
   hardware.enableRedistributableFirmware = true;
 }

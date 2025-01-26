@@ -15,6 +15,7 @@
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
     inputs.nix-flatpak.nixosModules.nix-flatpak
+    inputs.home-manager.nixosModules.home-manager
 
     # Pieces of configuration can be split up into separate files:
     # ./users.nix
@@ -23,6 +24,7 @@
     ./xserver.nix
     ./network.nix
     ./nh.nix
+    ./home-manager.nix
     ./pipewire.nix
     ./program.nix
     ./security.nix
