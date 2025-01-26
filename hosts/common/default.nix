@@ -191,10 +191,10 @@
   # Hyprland
   programs.hyprland = {
     enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
     # Development version of hyprland
     # package = inputs.hyprland.packages.${pkgs.system}.default;
-    portalPackage =
-      inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+    # portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
   xdg.portal = {
     enable = true;
