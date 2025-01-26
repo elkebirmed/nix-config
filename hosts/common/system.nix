@@ -4,7 +4,7 @@
   lib,
   config,
   inputs,
-  useranme,
+  username,
   ...
 }:
 {
@@ -21,7 +21,7 @@
       # Workaround for https://github.com/NixOS/nix/issues/9574
       nix-path = config.nix.nixPath;
 
-      allowed-users = [ useranme ];
+      allowed-users = [ username ];
 
       auto-optimise-store = true;
     };
