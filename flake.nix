@@ -28,6 +28,12 @@
   } @ inputs: let
     inherit (self) outputs;
 
+    # Default useranme
+    username = "mohamed";
+
+    # Path to the configuration
+    configPath = "/home/mohamed/Projects/nix-config";
+
     # Supported systems for your flake packages, shell, etc
     systems = [
       "aarch64-linux"
@@ -63,7 +69,7 @@
     # Available through 'nixos-rebuild --flake .#hostname'
     nixosConfigurations = {
       crazy = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit inputs outputs useranme configPath;};
         modules = [
           ./hosts/crazy
         ];

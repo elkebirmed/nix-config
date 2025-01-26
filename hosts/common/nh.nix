@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, configPath ... }:
 {
   programs.nh = {
     enable = true;
@@ -8,7 +8,7 @@
       extraArgs = "--keep-since 7d --keep 5";
     };
 
-    flake = "/home/mohamed/Projects/nix-config";
+    flake = configPath;
   };
 
   environment.systemPackages = with pkgs; [

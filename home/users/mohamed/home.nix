@@ -16,7 +16,6 @@
 
     # Pieces of configuration can be split up into separate files:
     # ./nvim.nix
-    ../../common/home.nix
   ];
 
   nixpkgs = {
