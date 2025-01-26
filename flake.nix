@@ -28,7 +28,7 @@
   } @ inputs: let
     inherit (self) outputs;
 
-    # Default useranme
+    # Default username
     username = "mohamed";
 
     # Path to the configuration
@@ -69,7 +69,7 @@
     # Available through 'nixos-rebuild --flake .#hostname'
     nixosConfigurations = {
       crazy = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs useranme configPath;};
+        specialArgs = {inherit inputs outputs username configPath;};
         modules = [
           ./hosts/crazy
         ];
