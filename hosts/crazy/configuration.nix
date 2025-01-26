@@ -143,7 +143,7 @@
         # Groups to join (such as networkmanager, audio, docker, etc)
         extraGroups = ["wheel" "networkmanager" ];
       };
-    }
+    };
   };
 
   # SSH server setup
