@@ -22,7 +22,7 @@
     ./hardware.nix
     ./xserver.nix
     ./network.nix
-    # TODO: ./nh.nix
+    ./nh.nix
     ./pipewire.nix
     ./program.nix
     ./security.nix
