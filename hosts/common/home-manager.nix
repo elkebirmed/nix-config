@@ -1,4 +1,4 @@
-{ pkgs, outputs, ... }:
+{ pkgs, inputs, outputs, ... }:
 {
   home-manager = {
     useUserPackages = true;
