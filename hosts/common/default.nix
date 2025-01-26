@@ -215,7 +215,8 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "fr,ar";
+      xkb.layout = "fr,ara";
+      xkb.variant = ",azerty";
     };
     libinput = {
       enable = true;
