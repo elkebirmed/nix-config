@@ -1,4 +1,4 @@
-{ pkgs, configPath ... }:
+{ pkgs, configPath, ... }:
 {
   programs.nh = {
     enable = true;
