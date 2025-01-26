@@ -4,5 +4,4 @@
   security.sudo.enable = true;
   security.pam.services.swaylock = { };
   security.pam.services.hyprlock = { };
-  security.pam.services.greetd = { };
 }
