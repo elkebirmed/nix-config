@@ -2,6 +2,7 @@
 {
   programs.hyprland = {
     enable = true;
+    withUWSM  = true;
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
     # Development version of hyprland
     # package = inputs.hyprland.packages.${pkgs.system}.default;
