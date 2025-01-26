@@ -23,7 +23,6 @@
     ./xserver.nix
     ./network.nix
     ./nh.nix
-    ./home-manager.nix
     ./pipewire.nix
     ./program.nix
     ./security.nix
