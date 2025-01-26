@@ -32,6 +32,7 @@
     ./locale.nix
     ./flatpak.nix
     ./wayland.nix
+    ./display-manager.nix
     # TODO: ./virtualization.nix
   ];
 
