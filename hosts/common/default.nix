@@ -217,10 +217,6 @@
       enable = true;
       xkb.layout = "fr,ar";
     };
-
-    displayManager.autoLogin = {
-      enable = true;
-    };
     libinput = {
       enable = true;
     };
