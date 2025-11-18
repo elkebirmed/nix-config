@@ -35,7 +35,7 @@
     distrobox # Use any linux distribution inside your terminal
 
     bc # Calculator
-    ncdu # TUI disk usage
+    dua # better du
     fd # Better find
     httpie # Better curl
     jq # JSON pretty printer and manipulator
