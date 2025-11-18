@@ -1,0 +1,18 @@
+keys:
+  - &users:
+    - &mohamed age13arp8mtvqcrtjjft55knx8qzg94k2w9ufhc0j2v33kmxyf7q4akqzeuqlm
+
+  - &hosts:
+    - &crazy age1pkan90rgxq6dc9w9mv775xt5ut9umraknl2qy68nr2gm5h6fpcrqhwr6xf
+
+creation_rules:
+  - path_regex: hosts/crazy/secrets.yaml$
+    key_groups:
+      - age:
+        - *mohamed
+        - *crazy
+
+  - path_regex: home/mohamed/secrets.yaml$
+    key_groups:
+      - age:
+        - *mohamed
