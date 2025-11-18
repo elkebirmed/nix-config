@@ -18,6 +18,8 @@
   programs.fish = {
     enable = lib.mkDefault true;
 
+    generateCompletions = true;
+
     # Abbreviations are like aliases but expand inline.
     shellAbbrs = rec {
       n = "nix";
@@ -34,6 +36,8 @@
       snrs = "sudo nixos-rebuild --flake . switch";
       hm = "home-manager --flake .";
       hms = "home-manager --flake . switch";
+
+      docker = "podman";
     };
 
     # Fish functions.
