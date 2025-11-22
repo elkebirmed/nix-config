@@ -22,5 +22,6 @@
   # Secrets.
   sops.secrets = {
     hello = {};
+    codestral_api_key = {};
   };
 }

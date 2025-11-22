@@ -5,8 +5,14 @@
 {
   lib,
   config,
+  inputs,
   ...
 }: {
+  imports = [inputs.nix-colors.homeManagerModules.default];
+
+  # Defining the color scheme to use.
+  colorScheme = inputs.nix-colors.colorSchemes.tokyo-city-terminal-dark;
+
   # Nix settings.
   nix = {
     settings = {

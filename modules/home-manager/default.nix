@@ -17,6 +17,9 @@
   # Version control systems.
   vcs = import ./vcs;
 
+  # Editors.
+  nvim = import ./editors/nvim;
+
   # Desktop environment configurations.
   hyprland = import ./graphical/hyprland;
 }

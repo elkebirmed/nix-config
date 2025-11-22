@@ -49,5 +49,6 @@
     nix-diff # Diff tool, more detailed
     nix-output-monitor # Processes output of Nix commands
     nh # Nice wrapper for NixOS and HM
+    manix # Nix search tool
   ];
 }
